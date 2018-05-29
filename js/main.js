@@ -1,10 +1,22 @@
 slideMenu()
-
+modelToggle()
 
 
 /************工具函数**************/
 
+function modelToggle(){
+    
+    let btn = document.querySelector('#wxBtn')
+    let wxModel = document.querySelector('#wxModel')
+    btn.onclick = function(e){
+        e.preventDefault()
+        wxModel.classList.add('active')
+    }
 
+    wxModel.onclick = function(){
+        this.classList.remove('active')
+    }
+}
 
 
 function slideMenu() {
@@ -18,11 +30,6 @@ function slideMenu() {
     } //hover显示效果
 
     
-
-    
-
-    
-
     function onmouseenter(li) {
         li.currentTarget.classList.add('active')
     }
