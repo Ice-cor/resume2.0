@@ -8,26 +8,16 @@
     <title>Document</title>
 </head>
 
-
 <body>
-        <div id="parent">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-              </div>
+    <div id="loading">
+
+    </div>
+    <script src="https://cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('loading', './particlesjs-config.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
 </body>
-<script>
-    var parent = document.getElementById('parent')
 
-function log (e) {
-  var target = e.target
-  var currentTarget = e.currentTarget
-  console.log(target,111)
-  console.log(currentTarget,222)
-}
-
-parent.addEventListener('click',
-log
-)
-</script>
 </html>
